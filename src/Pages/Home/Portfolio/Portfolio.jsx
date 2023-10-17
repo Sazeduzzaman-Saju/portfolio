@@ -79,6 +79,15 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
+          <div className="text-center">
+          <a
+                className="btn-main wow fadeInUp"
+                data-wow-delay=".6s"
+                href="#section-resume"
+              >
+                See More
+              </a>
+          </div>
         </div>
       </section>
     </>

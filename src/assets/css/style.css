@@ -1,49 +1,4 @@
-/* Kyros
-/* created by designesia
-
-
-==================================================
-Table of Content
-================================================== 
-* body
-* header
-    * subheader
-* navigation
-* content
-* section
-* footer
-* sidebar
-* blog
-* contact
-* coming soon page
-* elements
-    * address
-    * border
-    * breadcrumb
-    * button
-    * columns
-    * counter
-    * divider
-    * dropcap
-    * form
-    * heading
-    * icon font
-    * list
-    * map
-    * package
-    * page heading
-    * pagination
-    * pricing
-    * progress bar
-    * social icons
-    * spacer
-    * tabs
-    * team
-    * testimonial
-* media query */
-
 @charset "utf-8";
-
 /* import main fonts */
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -7943,8 +7898,8 @@ i.font60 {
     height: 40px;
     line-height: 40px;
     text-align: center;
-    border-radius: 50%;
-    background-color: green;
+    border-radius: 0%;
+    background-color: black;
     counter-increment: list;
     content: counter(list)
 }

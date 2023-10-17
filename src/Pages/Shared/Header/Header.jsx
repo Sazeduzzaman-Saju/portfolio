@@ -13,8 +13,8 @@ const Header = () => {
                     <div className="de-flex-col">
                       <div id="logo">
                         <a href="index.html">
-                          <img alt className="logo" src="../../../../public/images/logo-6.png" />
-                          <img alt className="logo-2" src="../../../../public/images/logo-6.png" />
+                          <img alt className="logo" src="https://i.ibb.co/KVDD6Px/coollogo-com-280971385.png" />
+                          <img alt className="logo-2" src="https://i.ibb.co/KVDD6Px/coollogo-com-280971385.png" />
                         </a>
                       </div>
                     </div>
@@ -82,16 +82,19 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link href="#section-blog">
-                          Blog
+                      <Link 
+                        activeClass="active"
+                          to="section-blog"
+                          spy={true}
+                          smooth={true}
+                          offset={50} duration={500}
+                          >
+                           Blog
                           <span />
                         </Link>
                       </li>
                       <li>
-                        <Link href="#section-contact">
-                          Contact Me
-                          <span />
-                        </Link>
+                      <Link to="projects">Contact Me</Link>
                       </li>
                     </ul>
                     <div className="menu_side_area">
