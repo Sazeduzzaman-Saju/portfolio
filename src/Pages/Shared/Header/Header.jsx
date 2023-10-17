@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-scroll';
 
 const Header = () => {
   return (
@@ -21,46 +22,76 @@ const Header = () => {
                   <div className="de-flex-col header-col-right">
                     <ul id="mainmenu">
                       <li>
-                        <a className="active" href="#top">
+                      <Link 
+                        activeClass="active"
+                          to="banner"
+                          spy={true}
+                          smooth={true}
+                          offset={50} duration={500}
+                          >
                           Home
                           <span />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#section-about">
+                        <Link 
+                        activeClass="active"
+                          to="section-about"
+                          spy={true}
+                          smooth={true}
+                          offset={50} duration={500}
+                          >
                           About me
                           <span />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#section-services">
+                        <Link 
+                        activeClass="active"
+                          to="section-services"
+                          spy={true}
+                          smooth={true}
+                          offset={50} duration={500}
+                          >
                           What I Do
                           <span />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#section-portfolio">
-                          Portfolio
+                      <Link 
+                        activeClass="active"
+                          to="section-portfolio"
+                          spy={true}
+                          smooth={true}
+                          offset={50} duration={500}
+                          >
+                           Portfolio
                           <span />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#section-resume">
-                          My Resume
+                      <Link 
+                        activeClass="active"
+                          to="section-resume"
+                          spy={true}
+                          smooth={true}
+                          offset={50} duration={500}
+                          >
+                           My Resume
                           <span />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#section-blog">
+                        <Link href="#section-blog">
                           Blog
                           <span />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="#section-contact">
+                        <Link href="#section-contact">
                           Contact Me
                           <span />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                     <div className="menu_side_area">

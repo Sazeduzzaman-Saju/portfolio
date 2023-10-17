@@ -23,15 +23,15 @@ const Banner = () => {
   ]);
   //   For Locations Icons
   const [locations, setLocations] = useState([
-    { country: "Bangladesh", cities: ["Dhaka", "Khilkhet"] },
-    { country: "Bangladesh", cities: ["Darshana", "Khulna"] },
+    { country: "Present", cities: ["Dhaka", "Khilkhet"] },
+    { country: "Permanent", cities: ["Darshana", "Khulna"] },
   ]);
 
   console.log(setName, setTitle, setRoles, setLocations);
   // Data End
   return (
     <>
-      <div>
+      <div id="banner">
         <div className="float-text">
           <div className="de_social-icons">
             {socialIcons.map((socialIcon, index) => (
