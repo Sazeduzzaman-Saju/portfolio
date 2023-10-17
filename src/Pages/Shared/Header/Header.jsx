@@ -13,8 +13,8 @@ const Header = () => {
                     <div className="de-flex-col">
                       <div id="logo">
                         <a href="index.html">
-                          <img alt className="logo" src="https://i.ibb.co/KVDD6Px/coollogo-com-280971385.png" />
-                          <img alt className="logo-2" src="https://i.ibb.co/KVDD6Px/coollogo-com-280971385.png" />
+                          <img alt className="logo" src="https://i.ibb.co/0ZYWc65/New-Project-1.png" />
+                          <img alt className="logo-2" src="https://i.ibb.co/0ZYWc65/New-Project-1.png" />
                         </a>
                       </div>
                     </div>
@@ -27,7 +27,7 @@ const Header = () => {
                           to="banner"
                           spy={true}
                           smooth={true}
-                          offset={50} duration={500}
+                          offset={-65} duration={500}
                           >
                           Home
                           <span />
@@ -39,7 +39,7 @@ const Header = () => {
                           to="section-about"
                           spy={true}
                           smooth={true}
-                          offset={50} duration={500}
+                          offset={-65} duration={500}
                           >
                           About me
                           <span />
@@ -51,7 +51,7 @@ const Header = () => {
                           to="section-services"
                           spy={true}
                           smooth={true}
-                          offset={50} duration={500}
+                          offset={-65} duration={500}
                           >
                           What I Do
                           <span />
@@ -63,7 +63,7 @@ const Header = () => {
                           to="section-portfolio"
                           spy={true}
                           smooth={true}
-                          offset={50} duration={500}
+                          offset={-65} duration={500}
                           >
                            Portfolio
                           <span />
@@ -75,7 +75,7 @@ const Header = () => {
                           to="section-resume"
                           spy={true}
                           smooth={true}
-                          offset={50} duration={500}
+                          offset={-65} duration={500}
                           >
                            My Resume
                           <span />
@@ -87,7 +87,7 @@ const Header = () => {
                           to="section-blog"
                           spy={true}
                           smooth={true}
-                          offset={50} duration={500}
+                          offset={-65} duration={500}
                           >
                            Blog
                           <span />
