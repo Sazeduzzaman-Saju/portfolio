@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   return (
@@ -80,13 +81,13 @@ const Portfolio = () => {
             </div>
           </div>
           <div className="text-center">
-          <a
-                className="btn-main wow fadeInUp"
-                data-wow-delay=".6s"
-                href="#section-resume"
-              >
-                See More
-              </a>
+            <Link
+              to="/projects"
+              className="btn-main wow fadeInUp"
+              data-wow-delay=".6s"
+            >
+              See More
+            </Link>
           </div>
         </div>
       </section>

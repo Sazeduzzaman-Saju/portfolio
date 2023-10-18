@@ -213,6 +213,9 @@ header.autoshow.scrollOn {
 header.autoshow.scrollOff {
     top: -120px;
 }
+Link{
+    cursor: pointer;
+}
 
 header div#logo {
     -webkit-transition: all 0.3s;
@@ -648,6 +651,7 @@ header .header-col.mid .social-icons {
     color: #fff;
     text-align: center;
     outline: none;
+    cursor: pointer;
 }
 
 #mainmenu a span {
