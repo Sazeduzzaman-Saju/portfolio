@@ -13,12 +13,12 @@ const About = () => {
     {
       title: "HTML",
       imageSrc: "https://i.ibb.co/LZGKnmv/HTML5-Badge-svg.png",
-      characterSrc: "https://i.ibb.co/j60VgP7/html5.png",
+      characterSrc: "https://i.ibb.co/LZGKnmv/HTML5-Badge-svg.png",
     },
     {
       title: "CSS",
       imageSrc: "https://i.ibb.co/GMNN4DG/logo-css-3-768.png",
-      characterSrc: "https://i.ibb.co/z2gbXXK/CSS3-logo-svg.png",
+      characterSrc: "https://i.ibb.co/GMNN4DG/logo-css-3-768.png",
     },
     {
       title: "JS",
@@ -28,7 +28,7 @@ const About = () => {
     {
       title: "React",
       imageSrc: "https://i.ibb.co/tMSYB8c/360-F-475014249-y-M9b-Jgvbw-JFpd-KJQO9p-Grr0-FWWCUo-R8z-removebg-preview.png",
-      characterSrc: "https://cdn3d.iconscout.com/3d/free/thumb/free-react-5645899-4695757.png",
+      characterSrc: "https://i.ibb.co/tMSYB8c/360-F-475014249-y-M9b-Jgvbw-JFpd-KJQO9p-Grr0-FWWCUo-R8z-removebg-preview.png",
     },
     {
       title: "Bootstrap",
@@ -38,17 +38,17 @@ const About = () => {
     {
       title: "Tailwind",
       imageSrc: "https://plugins.jetbrains.com/files/15321/418809/icon/pluginIcon.png",
-      characterSrc: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-256x154-bhw4dmbr.png",
+      characterSrc: "https://plugins.jetbrains.com/files/15321/418809/icon/pluginIcon.png",
     },
     {
       title: "Node Js",
       imageSrc: "https://cdn.iconscout.com/icon/free/png-256/free-node-js-1-1174935.png?f=webp",
-      characterSrc: "https://i.ibb.co/Sx8PnPV/png-transparent-js-logo-node-logos-and-brands-icon-removebg-preview.png",
+      characterSrc: "https://cdn.iconscout.com/icon/free/png-256/free-node-js-1-1174935.png?f=webp",
     },
     {
       title: "Firebase",
       imageSrc: "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/63018721094449d9901f5875_cff297d7.png",
-      characterSrc: "https://i.ibb.co/5Myhy6v/react-native-firebase-1-logo-png-transparent-removebg-preview.png",
+      characterSrc: "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/63018721094449d9901f5875_cff297d7.png",
     },
     // Add more technologies as needed
   ];

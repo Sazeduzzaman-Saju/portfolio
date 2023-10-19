@@ -8,8 +8,9 @@
   }
   
   .cover-image {
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: auto;
+    padding: 50px;
     object-fit: cover;
   }
   
@@ -17,6 +18,7 @@
     transition: all 0.5s;
     width: 100%;
     z-index: -1;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
   
   .cards:hover .wrappers {
@@ -39,23 +41,13 @@
   .wrappers::before {
     top: 0;
     height: 100%;
-    background-image: linear-gradient(
-      to top,
-      transparent 46%,
-      rgba(12, 13, 19, 0.5) 68%,
-      rgba(12, 13, 19) 97%
-    );
+    background-color: rgba(12, 13, 19) 98%;
   }
   .wrappers::after {
     bottom: 0;
     opacity: 1;
-    /* background-image: linear-gradient(
-      to bottom,
-      transparent 46%,
-      rgba(12, 13, 19, 0.5) 68%,
-      rgba(12, 13, 19) 97%
-    ); */
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgba(12, 13, 19) 98%;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
   }
   
   .cards:hover .wrappers::before,

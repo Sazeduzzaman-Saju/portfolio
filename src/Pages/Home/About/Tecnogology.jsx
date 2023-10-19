@@ -7,9 +7,9 @@ const TechnologyCard = ({ imageSrc, characterSrc, title, delay }) => (
   >
     <div className="cards">
       <div className="wrappers" data-animate="false">
-        <img src={imageSrc} className="cover-image" alt="Cover" />
+        <img src={imageSrc} className="cover-image" alt="Cover" width={'250px'} />
       </div>
-      <img src={characterSrc} className="character" alt="Character" />
+      <img src={characterSrc} className="character" alt="Character" width={'250px'} />
       <h1 className="character ch-title">{title}</h1>
     </div>
   </div>
