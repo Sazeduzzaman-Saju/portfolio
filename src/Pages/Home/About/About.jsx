@@ -1,50 +1,63 @@
 import React, { useState, useEffect } from "react";
+import "./About.css";
+import Tecnogology from "./Tecnogology";
 
 const About = () => {
   const [aboutContent, setAboutContent] = useState({
     title: "About Me",
     description:
-      "I am a website designer from Louisiana, with a strong focus in UI/UX design. I love to get new experiences and always learn from my surroundings. I've done more than 285 projects. You can check it through the portfolio section on this website. I looking forward to any opportunities and challenges.",
+      "Hey There, I am Sazeduzzaman Web Application Developer armed with proficient knowledge of the entire web development life cycle and react expertise. Adept at using HTML, CSS, JavaScript & React.js to design the user interface 💻 and deploy it effectively in applications.** passionate about learning and working with new tech😃. I love building interesting and amazing products that serve a great deal of purpose.",
   });
 
-  const [skills, setSkills] = useState([
-    { name: "HTML", percent: 90 },
-    { name: "CSS", percent: 85 },
-    { name: "PHP", percent: 80 },
-    { name: "jQuery", percent: 75 },
-  ]);
-
-  useEffect(() => {
-    // Simulate dynamic data fetching or any async operation
-    // You can replace this with actual API calls or other data fetching logic
-    const fetchData = async () => {
-      // Simulate an API call delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // Update the state with dynamic content
-      setAboutContent({
-        title: "About Me",
-        description:
-          "This content is dynamically loaded. You can update it based on actual data.",
-      });
-
-      // Update the state with dynamic skills
-      setSkills([
-        { name: "React", percent: 95 },
-        { name: "JavaScript", percent: 90 },
-        { name: "Node.js", percent: 85 },
-        { name: "Sass", percent: 80 },
-      ]);
-    };
-
-    fetchData();
-  }, []); // Empty dependency array ensures this effect runs only once on mount
-
+  const technologies = [
+    {
+      title: "HTML",
+      imageSrc: "https://i.ibb.co/LZGKnmv/HTML5-Badge-svg.png",
+      characterSrc: "https://i.ibb.co/j60VgP7/html5.png",
+    },
+    {
+      title: "CSS",
+      imageSrc: "https://i.ibb.co/GMNN4DG/logo-css-3-768.png",
+      characterSrc: "https://i.ibb.co/z2gbXXK/CSS3-logo-svg.png",
+    },
+    {
+      title: "JS",
+      imageSrc: "https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png",
+      characterSrc: "https://i.ibb.co/p0hdv2W/ottawa-js-logo-394-DB38073-seeklogo-com.png",
+    },
+    {
+      title: "React",
+      imageSrc: "https://i.ibb.co/tMSYB8c/360-F-475014249-y-M9b-Jgvbw-JFpd-KJQO9p-Grr0-FWWCUo-R8z-removebg-preview.png",
+      characterSrc: "https://cdn3d.iconscout.com/3d/free/thumb/free-react-5645899-4695757.png",
+    },
+    {
+      title: "Bootstrap",
+      imageSrc: "https://ph-files.imgix.net/6a529589-3dcf-43c2-8723-bca8307b4f37.png?auto=format",
+      characterSrc: "https://i.ibb.co/0KvvMyD/bg-f8f8f8-flat-750x-075-f-pad-750x1000-f8f8f8-removebg-preview.png",
+    },
+    {
+      title: "Tailwind",
+      imageSrc: "https://plugins.jetbrains.com/files/15321/418809/icon/pluginIcon.png",
+      characterSrc: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-256x154-bhw4dmbr.png",
+    },
+    {
+      title: "Node Js",
+      imageSrc: "https://cdn.iconscout.com/icon/free/png-256/free-node-js-1-1174935.png?f=webp",
+      characterSrc: "https://i.ibb.co/Sx8PnPV/png-transparent-js-logo-node-logos-and-brands-icon-removebg-preview.png",
+    },
+    {
+      title: "Firebase",
+      imageSrc: "https://global-uploads.webflow.com/6047a9e35e5dc54ac86ddd90/63018721094449d9901f5875_cff297d7.png",
+      characterSrc: "https://i.ibb.co/5Myhy6v/react-native-firebase-1-logo-png-transparent-removebg-preview.png",
+    },
+    // Add more technologies as needed
+  ];
+  
   return (
     <>
-      <section id="section-about">
+      <section id="section-about" className="pb-5">
         <div className="container relative">
-          <div className="row">
+          <div className="row gx-1">
             <div className="col-md-12 text-center wow fadeInUp">
               <h2>{aboutContent.title}</h2>
               <div className="space-border" />
@@ -53,22 +66,9 @@ const About = () => {
               <p>{aboutContent.description}</p>
             </div>
             <div className="spacer-single" />
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className={`col-lg-3 position-relative wow fadeIn`}
-                data-wow-delay={`${0.2 * (index + 1)}s`}
-              >
-                <div className="position-relative">
-                  <div className="progressbar" data-animate="false">
-                    <div className="circle" data-percent={skill.percent}>
-                      <div />
-                    </div>
-                    <h4>{skill.name}</h4>
-                  </div>
-                </div>
-              </div>
-            ))}
+          </div>
+          <div className="row">
+            <Tecnogology technologies={technologies} />
           </div>
         </div>
       </section>
