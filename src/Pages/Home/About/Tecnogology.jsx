@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 const TechnologyCard = ({ imageSrc, characterSrc, title, delay }) => (
@@ -10,7 +11,7 @@ const TechnologyCard = ({ imageSrc, characterSrc, title, delay }) => (
         <img src={imageSrc} className="cover-image" alt="Cover" width={'250px'} />
       </div>
       <img src={characterSrc} className="character" alt="Character" width={'250px'} />
-      <h1 className="character ch-title">{title}</h1>
+      <h1 className="character ch-title text-uppercase text-muted shadow-sm ">{title}</h1>
     </div>
   </div>
 );
