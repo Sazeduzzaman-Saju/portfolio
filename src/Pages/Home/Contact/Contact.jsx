@@ -5,7 +5,7 @@ const Contact = () => {
     <div>
       <section id="section-contact" className="jarallax">
         <div className="de-gradient-edge-top" />
-        <img src="images/background/l11.jpg" className="jarallax-img" alt />
+        <img src="images/background/l11.jpg" className="jarallax-img" alt="" />
         <div className="container z-index-1000">
           <div className="row">
             <div className="col-md-12 text-center wow fadeInUp">

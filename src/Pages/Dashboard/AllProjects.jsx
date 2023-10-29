@@ -1,4 +1,5 @@
 import React from "react";
+import AllProjectForm from "./Form/AllProjectForm";
 
 const AllProjects = () => {
   return (
@@ -16,7 +17,8 @@ const AllProjects = () => {
                 <a
                   className="btn-main wow fadeInUp animated"
                   data-wow-delay=".6s"
-                  disabled
+                  data-bs-toggle="modal"
+                  data-bs-target="#projectModal"
                   href="/allblogs"
                   style={{
                     visibility: "visible",
@@ -65,6 +67,24 @@ const AllProjects = () => {
           </div>
         </div>
       </div>
+      {/* Add Modal Start */}
+      <div>
+        {/* Button trigger modal */}
+        {/* Modal */}
+        <div
+          className="modal fade rounded-0"
+          id="projectModal"
+          tabIndex={-1}
+          aria-labelledby="projectModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog modal-dialog-centered rounded-0 modal-lg">
+           <AllProjectForm></AllProjectForm>
+          </div>
+        </div>
+      </div>
+
+      {/* Add Modal End */}
     </div>
   );
 };

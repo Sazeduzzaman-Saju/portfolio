@@ -27,7 +27,6 @@ const Banner = () => {
     { country: "Permanent", cities: ["Darshana", "Khulna"] },
   ]);
 
-  console.log(setName, setTitle, setRoles, setLocations);
   // Data End
   return (
     <>
@@ -53,7 +52,7 @@ const Banner = () => {
         aria-label="section"
         className="jarallax no-top-md no-bottom sm-pt-120 overflow-hidden"
       >
-        <img src="images/background/l11.jpg" className="jarallax-img" alt />
+        <img src="images/background/l11.jpg" className="jarallax-img" alt="" />
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">
@@ -93,7 +92,7 @@ const Banner = () => {
                 src="images/misc/8.png"
                 className="img-fluid wow fadeInUp"
                 data-wow-delay=".8s"
-                alt
+                alt=""
               />
             </div>
           </div>
