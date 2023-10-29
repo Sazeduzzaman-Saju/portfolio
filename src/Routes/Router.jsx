@@ -10,6 +10,7 @@ import Experience from "../Pages/Dashboard/Experience";
 import AllEducation from "../Pages/Dashboard/AllEducation";
 import AllContact from "../Pages/Dashboard/AllContact";
 import Overview from "../Pages/Dashboard/Overview";
+import AllBanner from "../Pages/Dashboard/AllBanner";
 
 
 const router = createBrowserRouter([
@@ -21,11 +22,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-            },
-            {
-                path: '/allblogs',
-                element: <AllBlogs></AllBlogs>
-            },
+            }
         ]
     },
     {
@@ -59,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path: '/admin/contact-all',
                 element: <AllContact></AllContact>
+            },
+            {
+                path: '/admin/banner-all',
+                element: <AllBanner></AllBanner>
             },
         ]
     }

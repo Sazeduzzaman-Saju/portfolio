@@ -7,13 +7,16 @@ const AllProjects = () => {
         <div className="col-md-12 text-center wow fadeInUp">
           <h2>Projects</h2>
           <div className="space-border" />
+        </div>
+        <div className="col-md-12 wow fadeInUp">
           <div className="card">
             <div className="card-header">
               <div className="d-flex justify-content-between">
                 <p className="p-0 m-0">Projects Table</p>
-                {/* <a
+                <a
                   className="btn-main wow fadeInUp animated"
-                  data-wow-delay=".6s" disabled
+                  data-wow-delay=".6s"
+                  disabled
                   href="/allblogs"
                   style={{
                     visibility: "visible",
@@ -22,7 +25,7 @@ const AllProjects = () => {
                   }}
                 >
                   Add
-                </a> */}
+                </a>
               </div>
             </div>
             <div className="card-body">

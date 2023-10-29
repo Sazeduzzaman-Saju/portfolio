@@ -26,38 +26,43 @@ const DashboardLayout = () => {
           <ul className="sidebar-nav">
             <li>
               <NavLink to="/admin/overview">
-                <i className="fa-solid fa-house-user me-4" /> Overview
+                <i className="fa-solid fa-house-user me-4" />Overview
               </NavLink>
             </li>
             <li>
               <NavLink to="/admin/project-all">
-                <i className="fa-solid fa-grip me-4" /> Projects
+                <i className="fa-solid fa-grip me-4" />Projects
               </NavLink>
             </li>
             <li>
               <NavLink to="/admin/experience-all">
-                <i className="fa-solid fa-user me-4" /> Experience
+                <i className="fa-solid fa-user me-4" />Experience
               </NavLink>
             </li>
             <li>
               <NavLink to="/admin/education-all">
-                <i className="fa-solid fa-user me-4" /> Education
+                <i className="fa-solid fa-user me-4" />Education
               </NavLink>
             </li>
             <li>
               <NavLink to="/admin/blogs-all">
-                <i className="fa-brands fa-microblog me-4" /> All Blogs
+                <i className="fa-brands fa-microblog me-4" />All Blogs
               </NavLink>
             </li>
             <li>
               <NavLink to="/admin/contact-all">
-                <i className="fa-brands fa-microblog me-4" /> All Contact
+                <i className="fa-brands fa-microblog me-4" />All Contact
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/admin/banner-all">
+                <i className="fa-brands fa-microblog me-4" />All Banner
               </NavLink>
             </li>
 
             <li>
               <NavLink to="/">
-                <i className="fa-solid fa-house-user me-4" /> Frontend
+                <i className="fa-solid fa-house-user me-4" />Frontend
               </NavLink>
             </li>
           </ul>

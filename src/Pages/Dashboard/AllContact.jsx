@@ -7,6 +7,8 @@ const AllContact = () => {
         <div className="col-md-12 text-center wow fadeInUp">
           <h2>Contact</h2>
           <div className="space-border" />
+        </div>
+        <div className="col-md-12 wow fadeInUp">
           <div className="card">
             <div className="card-header">
               <div className="d-flex justify-content-between">

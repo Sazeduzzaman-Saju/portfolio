@@ -1,31 +1,30 @@
-import React from "react";
+import React from 'react';
 
-const AllBlogs = () => {
-  return (
-    <>
-      <div className="container relative">
+const AllBanner = () => {
+    return (
+        <div className="container relative">
         <div className="row">
           <div className="col-md-12 text-center wow fadeInUp">
-            <h2>Blogs Add</h2>
+            <h2>Banner</h2>
             <div className="space-border" />
           </div>
           <div className="col-md-12 wow fadeInUp">
             <div className="card">
               <div className="card-header">
                 <div className="d-flex justify-content-between">
-                  <p className="p-0 m-0">Blogs Table</p>
+                  <p className="p-0 m-0">Banner Table</p>
                   <a
-                  className="btn-main wow fadeInUp animated"
-                  data-wow-delay=".6s" disabled
-                  href="/allblogs"
-                  style={{
-                    visibility: "visible",
-                    animationDelay: "0.6s",
-                    animationName: "fadeInUp",
-                  }}
-                >
-                  Add
-                </a>
+                    className="btn-main wow fadeInUp animated"
+                    data-wow-delay=".6s" disabled
+                    href="/allblogs"
+                    style={{
+                      visibility: "visible",
+                      animationDelay: "0.6s",
+                      animationName: "fadeInUp",
+                    }}
+                  >
+                    Add
+                  </a>
                 </div>
               </div>
               <div className="card-body">
@@ -66,8 +65,7 @@ const AllBlogs = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    );
 };
 
-export default AllBlogs;
+export default AllBanner;

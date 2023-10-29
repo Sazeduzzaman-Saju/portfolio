@@ -7,11 +7,13 @@ const AllEducation = () => {
         <div className="col-md-12 text-center wow fadeInUp">
           <h2>Education</h2>
           <div className="space-border" />
+        </div>
+        <div className="col-md-12 wow fadeInUp">
           <div className="card">
             <div className="card-header">
               <div className="d-flex justify-content-between">
                 <p className="p-0 m-0">Education Table</p>
-                {/* <a
+                <a
                   className="btn-main wow fadeInUp animated"
                   data-wow-delay=".6s" disabled
                   href="/allblogs"
@@ -22,7 +24,7 @@ const AllEducation = () => {
                   }}
                 >
                   Add
-                </a> */}
+                </a>
               </div>
             </div>
             <div className="card-body">
