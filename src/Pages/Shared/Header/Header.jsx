@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
+import Logo from "../Logo";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -10,32 +12,14 @@ const Header = () => {
             <div className="col-md-12">
               <div className="de-flex sm-pt10">
                 <div className="de-flex-col">
-                  <div className="de-flex-col">
-                    <Link
-                     to={'/login'}
-                     data-wow-delay=".6s"
-                     >
-                      <div id="logo">
-                        <img
-                          alt="Logo"
-                          className="logo"
-                          src="https://i.ibb.co/0ZYWc65/New-Project-1.png"
-                        />
-                        <img
-                          alt="Logo"
-                          className="logo-2"
-                          src="https://i.ibb.co/0ZYWc65/New-Project-1.png"
-                        />
-                      </div>
-                    </Link>
-                  </div>
+                  <Logo></Logo>
                 </div>
                 <div className="de-flex-col header-col-right">
                   <ul id="mainmenu">
                     <li>
                       <Link
                         activeClass="active"
-                        to="banner"
+                        to="section-banner"
                         spy={true}
                         smooth={true}
                         offset={-65}
@@ -111,7 +95,16 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/projects">Contact Me</Link>
+                      <Link
+                        activeClass="active"
+                        to="section-contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-65}
+                        duration={500}
+                      >
+                        Contact Me
+                      </Link>
                     </li>
                   </ul>
                   <div className="menu_side_area">

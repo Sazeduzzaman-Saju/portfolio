@@ -31,7 +31,7 @@ const Banner = () => {
   // Data End
   return (
     <>
-      <div id="banner">
+      <div id="section-banner">
         <div className="float-text">
           <div className="de_social-icons">
             {socialIcons.map((socialIcon, index) => (
