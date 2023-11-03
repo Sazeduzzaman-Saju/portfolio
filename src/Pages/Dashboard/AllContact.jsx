@@ -10,7 +10,7 @@ const AllContact = () => {
   } = useQuery({
     queryKey: ["contacts"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/contacts");
+      const response = await fetch("https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/contacts");
       return response.json();
     },
     refetchInterval: 1000, // Auto refetch every 60 seconds (adjust the interval as needed)
@@ -25,7 +25,7 @@ const AllContact = () => {
   }
   const handleRemove = (contact) => {
     console.log("deleted id",contact);
-    fetch(`http://localhost:5000/contacts/${contact._id}`, {
+    fetch(`https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/contacts/${contact._id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

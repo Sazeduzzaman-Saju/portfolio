@@ -44,7 +44,7 @@ const ProjectFormAdd = () => {
             projectImage: imgUrl,
           };
           console.log(projectItem);
-          axios.post('http://localhost:5000/projects', projectItem)
+          axios.post('https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/projects', projectItem)
           .then(data=>{
             toast.success("Project Added Successfully")
             console.log('After Posting 1 Project', data.data)

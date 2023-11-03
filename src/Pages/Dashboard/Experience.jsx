@@ -12,7 +12,7 @@ const Experience = () => {
   } = useQuery({
     queryKey: ["experiences"],
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/experiences");
+      const response = await fetch("https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/experiences");
       return response.json();
     },
     refetchInterval: 1000, // Auto refetch every 60 seconds (adjust the interval as needed)
@@ -26,7 +26,7 @@ const Experience = () => {
     return <div>Error: Failed to fetch data</div>;
   }
   const handleRemove = (exp) => {
-    fetch(`http://localhost:5000/experiences/${exp._id}`, { method: "DELETE" })
+    fetch(`https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/experiences/${exp._id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {
