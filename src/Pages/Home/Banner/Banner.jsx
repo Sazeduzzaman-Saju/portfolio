@@ -1,17 +1,12 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unescaped-entities */
-import React, { useState } from "react";
+import { useState } from "react";
+import {
+  TbBrandFiverr,
+  TbBrandFacebook,
+  TbBrandLinkedin,
+  TbBrandGithub,
+} from "react-icons/tb";
 
 const Banner = () => {
-  // Data Start
-  //   For Social Icons
-  const socialIcons = [
-    { platform: "facebook", iconClass: "fa fa-facebook fa-lg" },
-    { platform: "twitter", iconClass: "fa fa-twitter fa-lg" },
-    { platform: "instagram", iconClass: "fa fa-instagram fa-lg" },
-    { platform: "linkedin", iconClass: "fa fa-linkedin fa-lg" },
-    // Add more social icons as needed
-  ];
   //   For title Icons
   const [title, setName] = useState("Welcome to My Website");
   const [name, setTitle] = useState("Sazeduzzaman");
@@ -23,8 +18,8 @@ const Banner = () => {
   ]);
   //   For Locations Icons
   const [locations, setLocations] = useState([
-    { country: "Present", cities: ["Dhaka", "Khilkhet"] },
-    { country: "Permanent", cities: ["Darshana", "Khulna"] },
+    { country: "Present", cities: ["Khilkhet", "Dhaka"] },
+    { country: "Permanent", cities: ["Khulna", "Darshana"] },
   ]);
 
   // Data End
@@ -33,11 +28,30 @@ const Banner = () => {
       <div id="section-banner">
         <div className="float-text">
           <div className="de_social-icons">
-            {socialIcons.map((socialIcon, index) => (
-              <a key={index} href={socialIcon.platform}>
-                <i className={socialIcon.iconClass} />
-              </a>
-            ))}
+            <a
+              href="https://www.linkedin.com/in/szamansaju/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <TbBrandLinkedin size={20} title="Linkedin"></TbBrandLinkedin>
+            </a>
+            <a
+              href="https://www.facebook.com/iamsaju.99/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <TbBrandFacebook size={20} title="Facebook"></TbBrandFacebook>
+            </a>
+            <a
+              href="https://github.com/Sazeduzzaman"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <TbBrandGithub size={20} title="Github"></TbBrandGithub>
+            </a>
+            <a href="https://www.fiverr.com/sazeduzzamansaj" target="_blank" rel="noreferrer">
+              <TbBrandFiverr size={20} title="Fiverr"></TbBrandFiverr>
+            </a>
           </div>
           <span>Follow Me</span>
         </div>
@@ -89,7 +103,7 @@ const Banner = () => {
             </div>
             <div className="col-md-6">
               <img
-                src="images/misc/8.png"
+                src="https://i.ibb.co/GpLJdDR/New-Project-4.png"
                 className="img-fluid wow fadeInUp"
                 data-wow-delay=".8s"
                 alt=""

@@ -1,6 +1,32 @@
+import axios from "axios";
 import React from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    const { sender_name, sender_email, sender_phone, sender_message } = data;
+    const contactsItems = {
+      sender_name,
+      sender_email,
+      sender_phone,
+      sender_message,
+    };
+    axios.post("http://localhost:5000/contacts", contactsItems).then((data) => {
+      toast.success("Project Added Successfully");
+      console.log("After Posting 1 Project", data);
+      // reset the form
+      reset();
+    });
+  };
+
   return (
     <div>
       <section id="section-contact" className="jarallax">
@@ -15,6 +41,7 @@ const Contact = () => {
             <div className="col-lg-8 offset-lg-2 wow fadeInUp">
               <div className="contact_form_wrapper">
                 <form
+                  onSubmit={handleSubmit(onSubmit)}
                   name="contactForm"
                   id="contact_form"
                   className="form-border"
@@ -22,53 +49,49 @@ const Contact = () => {
                   action="#"
                 >
                   <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-6">
                       <div className="field-set">
                         <input
                           type="text"
-                          name="Name"
-                          id="name"
+                          {...register("sender_name", { required: true })}
                           className="form-control"
                           placeholder="Your Name"
-                          required
                         />
+                        {errors.sender_name && (
+                          <span className="text-danger">
+                            This field is required
+                          </span>
+                        )}
                       </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-6">
                       <div className="field-set">
                         <input
-                          type="text"
-                          name="Email"
-                          id="email"
+                          type="email"
+                          {...register("sender_email", { required: true })}
                           className="form-control"
                           placeholder="Your Email"
-                          required
                         />
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="field-set">
-                        <input
-                          type="text"
-                          name="phone"
-                          id="phone"
-                          className="form-control"
-                          placeholder="Your Phone"
-                          required
-                        />
+                        {errors.sender_email && (
+                          <span className="text-danger">
+                            This field is required
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="field-set">
                       <textarea
-                        name="message"
-                        id="message"
+                        {...register("sender_message", { required: true })}
                         className="form-control"
-                        placeholder="Your Message"
-                        required
-                        defaultValue={""}
+                        placeholder="Your Messages"
                       />
+                      {errors.sender_message && (
+                        <span className="text-danger">
+                          This field is required
+                        </span>
+                      )}
                     </div>
                     <div
                       className="g-recaptcha"
@@ -82,13 +105,6 @@ const Contact = () => {
                         className="btn-main"
                       />
                     </div>
-                    <div id="success_message" className="success">
-                      Your message has been sent successfully. Refresh this page
-                      if you want to send more messages.
-                    </div>
-                    <div id="error_message" className="error">
-                      Sorry there was an error sending your form.
-                    </div>
                   </div>
                 </form>
               </div>
@@ -97,17 +113,17 @@ const Contact = () => {
                 <div className="col-md-4">
                   <div className="wm-1" />
                   <h6>Email Me</h6>
-                  <p>contact@kyrosnoriaki.com</p>
+                  <p>szamansaju@gmail.com</p>
                 </div>
                 <div className="col-md-4">
                   <div className="wm-1" />
                   <h6>Call Me</h6>
-                  <p>+1 700 333 92 96</p>
+                  <p>(+88) 015 7661 4451</p>
                 </div>
                 <div className="col-md-4">
                   <div className="wm-1" />
                   <h6>Address</h6>
-                  <p>Collins Street West, Louisiana, Bayerfurt, USA</p>
+                  <p>Dhaka, Bangladesh</p>
                 </div>
               </div>
             </div>

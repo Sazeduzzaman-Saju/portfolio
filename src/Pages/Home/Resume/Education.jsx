@@ -1,44 +1,38 @@
-import React, { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
 const Education = () => {
-  const [education, setEducation] = useState([
-    {
-      id: 1,
-      title: "Master in Design",
-      school: "New York University",
-      duration: "2004 - 2008",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.",
+  const {
+    data: educations,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["educations"],
+    queryFn: async () => {
+      const response = await fetch("http://localhost:5000/educations");
+      return response.json();
     },
-    {
-      id: 2,
-      title: "Bachelor of Arts",
-      school: "University of London",
-      duration: "2008 - 2012",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.",
-    },
-    {
-      id: 3,
-      title: "Artist of College",
-      school: "University of Sydney",
-      duration: "2002 - 2004",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi tempora perferendis vero officia enim impedit voluptatem dignissimos, veniam ratione est alias rerum aperiam, nam aliquam reprehenderit iste dolor.",
-    },
-  ]);
+    refetchInterval: 1000, // Auto refetch every 60 seconds (adjust the interval as needed)
+  });
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error: Failed to fetch data</div>;
+  }
 
   return (
     <div className="p-4">
     <h3 className="s_border">Education</h3>
     <ul className="d_timeline">
-      {education.map((edu) => (
-        <li key={edu.id} className="d_timeline-item">
-          <h3 className="d_timeline-title">{edu.duration}</h3>
+      {educations.map((edu, index) => (
+        <li key={index} className="d_timeline-item">
+          <h3 className="d_timeline-title">{edu.start_date} <strong className="text-black px-2"> To</strong> {edu.end_date}</h3>
           <p className="d_timeline-text">
-            <span className="d_title">{edu.title}</span>
-            <span className="d_company">{edu.school}</span>
-            {edu.description}
+            <span className="d_title">{edu.subject}</span>
+            <span className="d_company">{edu.institute_name}</span>
+            {edu.education_description}
           </p>
         </li>
       ))}

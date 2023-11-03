@@ -44,17 +44,17 @@ const DashboardLayout = () => {
                 <i className="fa-solid fa-user me-4" />Education
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/admin/blogs-all">
                 <i className="fa-brands fa-microblog me-4" />All Blogs
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/admin/contact-all">
                 <i className="fa-brands fa-microblog me-4" />All Contact
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/admin/banner-all">
                 <i className="fa-brands fa-microblog me-4" />All Banner
               </NavLink>
@@ -64,7 +64,7 @@ const DashboardLayout = () => {
               <NavLink to="/">
                 <i className="fa-solid fa-house-user me-4" />Frontend
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </aside>
         <div id="navbar-wrappers">
