@@ -12,7 +12,7 @@ const AllEducation = () => {
   } = useQuery({
     queryKey: ["educations"],
     queryFn: async () => {
-      const response = await fetch("https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/educations");
+      const response = await fetch("http://localhost:5000/educations");
       return response.json();
     },
     refetchInterval: 1000, // Auto refetch every 60 seconds (adjust the interval as needed)
@@ -27,7 +27,7 @@ const AllEducation = () => {
   }
   const handleRemove = (education) => {
     console.log(education)
-    fetch(`https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/educations/${education._id}`, { method: "DELETE" })
+    fetch(`http://localhost:5000/educations/${education._id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {

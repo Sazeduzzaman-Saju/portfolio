@@ -26,7 +26,7 @@ const EducationAdd = () => {
       education_description,
     };
     axios
-      .post("https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/educations", educationsItems)
+      .post("http://localhost:5000/educations", educationsItems)
       .then((data) => {
         toast.success("Project Added Successfully");
         console.log("After Posting 1 Project", data);

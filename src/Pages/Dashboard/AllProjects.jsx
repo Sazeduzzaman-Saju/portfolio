@@ -13,7 +13,7 @@ const AllProjects = () => {
   } = useQuery({
     queryKey: ["projects"],
     queryFn: async () => {
-      const response = await fetch("https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/projects");
+      const response = await fetch("http://localhost:5000/projects");
       return response.json();
     },
     refetchInterval: 1000, // Auto refetch every 60 seconds (adjust the interval as needed)
@@ -27,7 +27,7 @@ const AllProjects = () => {
     return <div>Error: Failed to fetch data</div>;
   }
   const handleRemove = (project) => {
-    fetch(`https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/projects/${project._id}`, { method: "DELETE" })
+    fetch(`http://localhost:5000/projects/${project._id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {

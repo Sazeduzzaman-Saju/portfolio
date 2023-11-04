@@ -20,7 +20,7 @@ const ExperienceAdd = () => {
       end_date,
       job_description,
     };
-    axios.post('https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/experiences', experienceItems)
+    axios.post('http://localhost:5000/experiences', experienceItems)
     .then(experienceItems=>{
       toast.success("Project Added Successfully")
       console.log('After Posting 1 Project', experienceItems)

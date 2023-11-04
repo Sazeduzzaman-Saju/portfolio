@@ -13,7 +13,7 @@ const Projects = () => {
   } = useQuery({
     queryKey: ["projects"],
     queryFn: async () => {
-      const response = await fetch("https://portfolio-server-osbt6h8tz-sazeduzzzaman.vercel.app/projects");
+      const response = await fetch("http://localhost:5000/projects");
       return response.json();
     },
     refetchInterval: 1000, // Auto refetch every 60 seconds (adjust the interval as needed)
